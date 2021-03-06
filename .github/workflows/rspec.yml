@@ -1,4 +1,4 @@
-on: [push, pull_request] # プルリクエスト時のみに動かす
+on: [push, pull_request] # プルリクエスト時のみに動かす。
 jobs:
   build:
     runs-on: ubuntu-latest
