@@ -1,0 +1,43 @@
+# inherit_from: .rubocop_todo.yml
+
+Style/AsciiComments:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Rails/UniqueValidationWithoutIndex:
+  Enabled: false
+
+Metrics/ClassLength:
+  Enabled: false
+
+Metrics/ModuleLength:
+  Enabled: false
+
+require:
+  - rubocop-rails
+  - rubocop-performance
+
+Rails/Delegate:
+  Enabled: false
+
+AllCops:
+  TargetRubyVersion: 3.0 # rubyのバージョン
+  NewCops: enable # rubocopの新機能をactiveにする
+  Exclude:
+    - 'Gemfile'
+    - 'log/**/*'
+    - 'spec/**/*'
+    - 'vendor/**/*'
+    - 'tmp/**/*'
+    - 'db/**/*'
+    - 'bin/**/*'
+    - 'assets/**/*'
+    - 'node_modules/**/*'

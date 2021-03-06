@@ -1,0 +1,14 @@
+on: [pull_request] # プルリクエスト時のみに動かす
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Rubyをセットアップ
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: 3.0
+    - name: Gemをインストールする
+      run: bundle install
+    - name: Rubocopを実行してチェックする
+      run: bundle exec rubocop
